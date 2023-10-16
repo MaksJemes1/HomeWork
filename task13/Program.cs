@@ -5,13 +5,25 @@
 Console.Clear();
 Console.Write("Введите число - ");
 int num1 = int.Parse(Console.ReadLine());
-int number = 0;
-if(num1 > 99)
+int result = num1;
+int sum = 0;
+if(num1 >= 0 && num1 < 100)
 {
-    
-Console.Write("Молодец");
+   Console.Write("Третьего числа нет!");
 }
-else
+// else if(num1 > 99 && num1 < 1000)
+// {
+//    result = num1 % 10;
+//    Console.Write("Третьим числом является - " + result);
+// } 
+while(result > 999)
 {
-Console.Write("Третьей цифры нет");
+   result = result / 10;
+   sum = result;
+   Console.WriteLine("Получилось - " + sum);
+}
+if(sum < 1000)
+{
+   sum = sum % 10;
+Console.WriteLine("Третья цифра - " + sum);
 }
